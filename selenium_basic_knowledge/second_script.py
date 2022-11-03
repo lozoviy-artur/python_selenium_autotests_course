@@ -1,22 +1,22 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-import time
+import time 
 
-link = "http://suninjuly.github.io/find_xpath_form"
+link = "http://suninjuly.github.io/simple_form_find_task.html"
 
 try:
     browser = webdriver.Chrome()
     browser.get(link)
 
     input1 = browser.find_element(By.NAME, "first_name")
-    input1.send_keys("Ivan")
+    input1.send_keys("QQ")
     input2 = browser.find_element(By.NAME, "last_name")
-    input2.send_keys("Petrov")
+    input2.send_keys("EE")
     input3 = browser.find_element(By.CLASS_NAME, "city")
-    input3.send_keys("Smolensk")
+    input3.send_keys("Paris")
     input4 = browser.find_element(By.ID, "country")
-    input4.send_keys("Russia")
-    button = browser.find_element(By.XPATH, "//button[@type='submit']")
+    input4.send_keys("France")
+    button = browser.find_element(By.CSS_SELECTOR, "button.btn")
     button.click()
 
 finally:
@@ -26,5 +26,6 @@ finally:
     browser.quit()
 
 # не забываем оставить пустую строку в конце файла
+
 
 

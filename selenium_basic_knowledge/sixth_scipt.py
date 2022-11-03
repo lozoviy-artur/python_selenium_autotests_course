@@ -9,9 +9,9 @@ try:
     old_link = "http://suninjuly.github.io/registration1.html"  # should pass
     browser = webdriver.Chrome()
     browser.get(old_link)
-    name = browser.find_element(By.CSS_SELECTOR, "input[placeholder = 'Input your first name'] ") # input[placeholder = "Input your first name"]  # CSS
-    last_name = browser.find_element(By.CSS_SELECTOR, "input[placeholder='Input your last name'] ") #CS
-    email = browser.find_element(By.CLASS_NAME, "form-control.third")  #.form-control.third #by class
+    name = browser.find_element(By.CSS_SELECTOR, "input[placeholder = 'Input your first name'] ")
+    last_name = browser.find_element(By.CSS_SELECTOR, "input[placeholder='Input your last name'] ")
+    email = browser.find_element(By.CLASS_NAME, "form-control.third")
     submit_btn = browser.find_element(By.CLASS_NAME, "btn")
     expected_welcome_text = "Congratulations! You have successfully registered!"
 
